@@ -1,5 +1,3 @@
-
-
 <?php
 /**
  * The header for our theme.
@@ -18,34 +16,12 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-<?php do_action('storefront_before_site'); ?>
-
-<div id="page" class="hfeed site">
-	<?php do_action('storefront_before_header'); ?>
-
-	<header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
-
+        <a href="<?php echo get_home_url(); ?>"><h1><?php bloginfo(); ?></h1></a>
+        <a href=<?php echo wc_get_cart_url(); ?>>Cart</a>
+        
         <?php
-        bloginfo();
-        wp_nav_menu();
-        storefront_header_cart();
+            wp_nav_menu();
         ?>
         </header>
 
 	</header><!-- #masthead -->
-
-	<?php
-    /**
-     * Functions hooked in to storefront_before_content.
-     *
-     * @hooked storefront_header_widget_region - 10
-     * @hooked woocommerce_breadcrumb - 10
-     */
-    do_action('storefront_before_content'); ?>
-
-	<div id="content" class="site-content" tabindex="-1">
-		<div class="col-full">
-
-		<?php
-        do_action('storefront_content_top');

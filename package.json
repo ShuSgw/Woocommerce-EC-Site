@@ -1,0 +1,18 @@
+{
+  "name": "Haena_kim",
+  "version": "1.0.0",
+  "description": "E_commerce_website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass --include-path scss assets/styles/main.scss style.css -w",
+    "browse": "browser-sync start --server --files *",
+    "dev": "run-p sass browse"
+  },
+  "repository": "https://github.com/ShuSgw/WordPress-ChildTheme-Storefront.git",
+  "author": "Shuhei Shagawa <sgw.sgw.shu@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.10.0"
+  }
+}
