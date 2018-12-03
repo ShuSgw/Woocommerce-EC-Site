@@ -16,12 +16,14 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div id="page" class="hfeed site">
+	<header>
+
         <a href="<?php echo get_home_url(); ?>"><h1><?php bloginfo(); ?></h1></a>
         <a href=<?php echo wc_get_cart_url(); ?>>Cart</a>
         
         <?php
             wp_nav_menu();
         ?>
-        </header>
 
-	</header><!-- #masthead -->
+	</header>

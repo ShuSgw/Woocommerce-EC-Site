@@ -8,28 +8,45 @@
         while ($loop->have_posts()) : $loop->the_post();
         ++$counter; ?>
         <?php if ($counter == 1) :?>
-        <h2><?php the_title(); ?></h2>
-        <?php the_category(); ?>
         <?php the_post_thumbnail('normal'); ?>
-        <a href=<?php the_permalink(); ?>>続き</a>
+        <h2><?php the_title(); ?></h2>
+        <a href=<?php the_permalink(); ?>>See details</a>
         <?php elseif ($counter == 2) :; ?>
             <?php the_post_thumbnail('small'); ?>
+            <h2><?php the_title(); ?></h2>
+            <a href=<?php the_permalink(); ?>>See details</a>
         <?php elseif ($counter == 3) :; ?>
             <?php the_post_thumbnail('small'); ?>
+            <h2><?php the_title(); ?></h2>
+            <a href=<?php the_permalink(); ?>>See details</a>
         <?php elseif ($counter == 4) :; ?>
             <?php the_post_thumbnail('long'); ?>
+            <h2><?php the_title(); ?></h2>
+            <a href=<?php the_permalink(); ?>>See details</a>
         <?php elseif ($counter == 5) :; ?>
             <?php the_post_thumbnail('small'); ?>
+            <h2><?php the_title(); ?></h2>
+            <a href=<?php the_permalink(); ?>>See details</a>
         <?php elseif ($counter == 6) :; ?>
             <?php the_post_thumbnail('small'); ?>
+            <h2><?php the_title(); ?></h2>
+            <a href=<?php the_permalink(); ?>>See details</a>
         <?php elseif ($counter == 7) :; ?>
             <?php the_post_thumbnail('long'); ?>
+            <h2><?php the_title(); ?></h2>
+            <a href=<?php the_permalink(); ?>>See details</a>
         <?php elseif ($counter == 8) :; ?>
             <?php the_post_thumbnail('big'); ?>
+            <h2><?php the_title(); ?></h2>
+            <a href=<?php the_permalink(); ?>>See details</a>
         <?php elseif ($counter == 9) :; ?>
             <?php the_post_thumbnail('small'); ?>
+            <h2><?php the_title(); ?></h2>
+            <a href=<?php the_permalink(); ?>>See details</a>
         <?php elseif ($counter == 10) :; ?>
             <?php the_post_thumbnail('small'); ?>
+            <h2><?php the_title(); ?></h2>
+            <a href=<?php the_permalink(); ?>>See details</a>
         <?php endif; ?>
     <?php
         endwhile;
