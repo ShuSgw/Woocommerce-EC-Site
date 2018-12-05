@@ -11,7 +11,11 @@
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  storefront-child
 */
-
-footer {
-    background: red;
-}
+@import './base/remove';
+@import './base/reset';
+@import './base/congig.scss';
+@import './base/base';
+@import './modules/header';
+@import './modules/front-page.scss';
+@import './modules/button.scss';
+@import './modules/footer.scss';

@@ -1,0 +1,44 @@
+.thumbs__thumb__detailsBtn {
+    background: $theme-color;
+    display: inline-block;
+    font-size: 15px;
+    padding: 1em 2.5em;
+    border-radius: 50px;
+    transition: .2s ease-in-out;
+
+    &:hover {
+        background: black;
+        transition: .2s ease-in-out;
+    }
+}
+
+// .hamburgerBtn {
+//     flex-grow: 1;
+//     text-align: right;
+// }
+
+#hamburger {
+    background: red;
+    text-align: right;
+    width: 15px;
+    height: 12px;
+    cursor: pointer;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    span {
+        position: relative;
+        display: block;
+        height: 2px;
+        width: 100%;
+        background: black;
+        border-radius: 5px;
+        opacity: 1;
+    }
+
+    @include pc {
+        display: none;
+    }
+}

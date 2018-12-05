@@ -1,0 +1,39 @@
+$titlesize: 30px;
+$page-width: 1088px;
+$nav-font-size: 20px;
+$nav-font-size-mob: 30px;
+$nav-height: 35px;
+$darktext: grey;
+$theme-color: #f5e3c6;
+
+// @include tab {
+//     padding-top: 15%;
+//     flex-direction: row;
+//     justify-content: center;
+// }
+
+// @include pc {
+//     padding-top: 15%;
+// }
+
+$pc: 1024px; // pc
+$tab: 680px; // tablet
+$sp: 480px; // smartphone
+
+@mixin pc {
+  @media (min-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (min-width: ($tab)) and (max-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}

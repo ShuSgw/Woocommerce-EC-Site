@@ -1,0 +1,14 @@
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.site {
+    background: red;
+    max-width: $page-width;
+    margin: 0 auto;
+}
