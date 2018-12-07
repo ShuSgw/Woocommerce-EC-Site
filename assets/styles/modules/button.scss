@@ -2,7 +2,6 @@
 .button.alt,
 .added_to_cart,
 .button {
-    color: black;
     background: $theme-color;
     display: inline-block;
     font-size: 15px;
@@ -11,14 +10,13 @@
     transition: .2s ease-in-out;
 
     &:hover {
-        background: black;
+        background: darken($theme-color, 50%);
         transition: .2s ease-in-out;
     }
 }
 
 
 #hamburger {
-    background: red;
     text-align: right;
     width: 15px;
     height: 12px;

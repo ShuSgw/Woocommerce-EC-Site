@@ -9,7 +9,6 @@ header {
     @include pc {
         padding-bottom: 0;
         width: $page-width;
-        background: green;
         height: 100px;
     }
 }
@@ -25,7 +24,6 @@ header {
         border-bottom: none;
         flex-grow: none;
         width: 50%;
-        background: black;
 
         a {
             color: $darktext;
@@ -33,12 +31,14 @@ header {
     }
 }
 
+
 .nav {
     display: none;
     font-size: $nav-font-size-mob;
     right: 0;
-    background: #F5E3C6;
     height: 100vh;
+    background: $theme-color;
+    background: yellow;
 
     @include pc {
         display: flex;
@@ -50,7 +50,8 @@ header {
         justify-content: flex-end;
         align-items: center;
         font-size: $nav-font-size;
-        border-bottom: solid 3px purple;
+        border-bottom: solid 3px black;
+        background: white;
     }
 }
 
@@ -59,7 +60,6 @@ header {
 
     @include pc {
         text-align: left;
-        background: pink;
         flex-grow: 2;
     }
 
@@ -71,9 +71,30 @@ header {
             opacity: 1;
             padding-bottom: 0;
             display: inline-block;
-            padding: 0 .5em;
+            margin-right: 3em;
         }
     }
+}
+
+.current_page_item {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        background: $theme-color;
+        top: -30%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        width: 35%;
+        height: 20%;
+        background: $theme-color;
+    }
+
+    // @include pc {
+    //     position: absolute;
+    //     border-top: solid 1px $theme-color;
+    // }
 }
 
 .nav__mobCartList {

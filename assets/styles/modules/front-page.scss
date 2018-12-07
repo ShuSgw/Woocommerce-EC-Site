@@ -76,7 +76,6 @@
     right: 50%;
     transform: translate(50%, -50%);
     width: 85%;
-    background: yellow;
     display: none;
     z-index: 999;
 }
@@ -84,11 +83,9 @@
 .thumbs__thumb__title {
     font-size: 30px;
     margin-bottom: 30px;
-    background: blue;
 }
 
 .thumbs__thumb__content {
     font-size: 21px;
     margin-bottom: 30px;
-    background: red;
 }
