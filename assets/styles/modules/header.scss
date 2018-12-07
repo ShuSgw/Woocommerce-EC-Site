@@ -38,7 +38,7 @@ header {
     right: 0;
     height: 100vh;
     background: $theme-color;
-    background: yellow;
+    background: $theme-color;
 
     @include pc {
         display: flex;

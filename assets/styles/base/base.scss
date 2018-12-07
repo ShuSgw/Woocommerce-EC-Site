@@ -21,6 +21,6 @@ li {
     margin: 0 auto;
 
     @include pc {
-        max-width: $page-width;
+        width: $page-width;
     }
 }

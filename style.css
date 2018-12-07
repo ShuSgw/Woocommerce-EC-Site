@@ -169,7 +169,7 @@ li {
   margin: 0 auto; }
   @media (min-width: 1024px) {
     .site {
-      max-width: 1088px; } }
+      width: 1088px; } }
 
 header {
   display: flex;
@@ -204,7 +204,7 @@ header {
   right: 0;
   height: 100vh;
   background: #f5e3c6;
-  background: yellow; }
+  background: #f5e3c6; }
   @media (min-width: 1024px) {
     .nav {
       display: flex;
