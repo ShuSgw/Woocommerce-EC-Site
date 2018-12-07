@@ -26,7 +26,7 @@
                 </div>
                 <div class="nav">
                         <?php wp_nav_menu(array('container' => false, 'menu_class' => 'nav__menu')); ?>
-                        <li class="nav__mobCartList"><a href=<?php echo wc_get_cart_url(); ?>>Cart</a></li>
+                        <li class="nav__mobCartList"><a href=<?php echo wc_get_cart_url(); ?>>Cart</a></li><?php wc_get_cart_url(); ?></a>
                         <a href=<?php echo wc_get_cart_url(); ?>><i class="fas fa-cart-plus nav__cartBtn"></i></a>
                 </div>
         </header>

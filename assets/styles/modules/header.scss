@@ -35,6 +35,9 @@ header {
 .nav {
     display: none;
     font-size: $nav-font-size-mob;
+    right: 0;
+    background: #F5E3C6;
+    height: 100vh;
 
     @include pc {
         display: flex;
@@ -61,12 +64,23 @@ header {
 
     .menu-item {
         padding-bottom: 2em;
+        opacity: 0;
 
         @include pc {
+            opacity: 1;
             padding-bottom: 0;
             display: inline-block;
             padding: 0 .5em;
         }
+    }
+}
+
+.nav__mobCartList {
+
+    opacity: 0;
+
+    @include pc {
+        display: none;
     }
 }
 
@@ -76,12 +90,5 @@ header {
     @include pc {
         display: block;
         flex-grow: 1;
-    }
-}
-
-.nav__mobCartList {
-
-    @include pc {
-        display: none;
     }
 }

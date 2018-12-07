@@ -1,4 +1,6 @@
-.thumbs__thumb__detailsBtn {
+.thumbs__thumb__detailsBtn,
+.button.alt,
+.button {
     background: $theme-color;
     display: inline-block;
     font-size: 15px;
@@ -12,10 +14,6 @@
     }
 }
 
-// .hamburgerBtn {
-//     flex-grow: 1;
-//     text-align: right;
-// }
 
 #hamburger {
     background: red;
@@ -41,4 +39,38 @@
     @include pc {
         display: none;
     }
+}
+
+// .orderby 
+
+.orderby {
+    overflow: hidden;
+    width: 90%;
+    margin: 2em auto;
+    text-align: center;
+    width: 100%;
+    padding-right: 1em;
+    cursor: pointer;
+    text-indent: 0.01px;
+    text-overflow: ellipsis;
+    border: none;
+    outline: none;
+    background: transparent;
+    background-image: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    border-radius: 2px;
+    border: 2px solid #da3c41;
+    border-radius: 50px;
+    background: #ffffff;
+    padding: 8px 38px 8px 8px;
+    color: #da3c41;
+}
+
+.orderby {}
+
+.orderby ::-ms-expand {
+    display: none;
 }

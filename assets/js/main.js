@@ -24,7 +24,7 @@ jQuery(document).ready(function() {
   function hambargerMenu() {
     var hamBtn = jQuery("#hamburger");
     var bars = document.getElementsByClassName("bar");
-    var show = jQuery(".nav");
+    var nav = jQuery(".nav");
     var lists = jQuery(".nav").find("li");
     var menuToggle = new TimelineMax({
       paused: true,
@@ -43,27 +43,64 @@ jQuery(document).ready(function() {
             display: ["block", "none", "block"]
           }
         })
-        .fromTo(
-          show,
-          0.7,
-          {display: "none", background: "#F5E3C6", height: "100vh", right: "0"},
+        .to(nav, 0.5, {
+          display: "flex",
+          width: "100vw",
+          top: "0",
+          position: "fixed",
+          zIndex: "9999",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          ease: Power4.easeOut
+        })
+        .staggerTo(
+          lists,
+          0.5,
           {
-            display: "flex",
-            width: "100vw",
-            top: "0",
-            position: "fixed",
-            zIndex: "9999",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            ease: Power4.easeOut
-          }
-        )
-        .fromTo(lists, 0.5, {opacity: "0"}, {opacity: "1"});
+            y: -10,
+            opacity: 1,
+            ease: Linear.easeNone
+          },
+          0.1
+        );
       jQuery(hamBtn).on("click", function() {
         menuToggle.reversed() ? menuToggle.restart() : menuToggle.reverse();
       });
     }
+
+    var $resizeTimer = false;
+    jQuery(window).resize(function() {
+      if ($resizeTimer !== false) {
+        clearTimeout($resizeTimer);
+      }
+      $resizeTimer = setTimeout(function() {
+        var w = jQuery(window).width();
+        console.log("resize");
+        // menuToggle.kill();
+        if (w < x) {
+          hambargerMenu();
+          jQuery(nav).css({display: "none"});
+          jQuery(lists).css({opacity: 0});
+        } else {
+          jQuery(nav).css({
+            display: "flex",
+            position: "static",
+            width: "50%",
+            height: "initial",
+            height: "$nav-height",
+            flexDirection: "row",
+            justifyContent: "flexEnd",
+            alignItems: "center"
+          });
+          jQuery(lists).css({
+            opacity: 1,
+            position: "relative",
+            top: "0px"
+          });
+        }
+      }, 300);
+    });
   }
 });
 // attachment - woocommerce_thumbnail size - woocommerce_thumbnail wp - post - image
