@@ -1,3 +1,7 @@
+body {
+    font-family: $base-font;
+}
+
 ul {
     margin: 0;
     padding: 0;
@@ -8,7 +12,11 @@ li {
 }
 
 .site {
+    width: $mobile-width;
     background: red;
-    max-width: $page-width;
     margin: 0 auto;
+
+    @include pc {
+        max-width: $page-width;
+    }
 }

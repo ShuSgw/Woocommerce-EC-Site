@@ -3,12 +3,13 @@ header {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    width: $mobile-width;
+    margin: 0 auto;
 
     @include pc {
         padding-bottom: 0;
         width: $page-width;
         background: green;
-        margin: 0 auto;
         height: 100px;
     }
 }

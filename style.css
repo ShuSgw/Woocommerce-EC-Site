@@ -11,7 +11,14 @@
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  storefront-child
 */
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 main > header {
+  display: none; }
+
+.entry-header {
+  display: none; }
+
+.product_meta {
   display: none; }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -143,6 +150,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+body {
+  font-family: "Roboto", sans-serif; }
+
 ul {
   margin: 0;
   padding: 0; }
@@ -151,21 +161,25 @@ li {
   list-style-type: none; }
 
 .site {
+  width: 90%;
   background: red;
-  max-width: 1088px;
   margin: 0 auto; }
+  @media (min-width: 1024px) {
+    .site {
+      max-width: 1088px; } }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative; }
+  position: relative;
+  width: 90%;
+  margin: 0 auto; }
   @media (min-width: 1024px) {
     header {
       padding-bottom: 0;
       width: 1088px;
       background: green;
-      margin: 0 auto;
       height: 100px; } }
 
 .header__title {
@@ -296,7 +310,9 @@ header {
 
 .thumbs__thumb__detailsBtn,
 .button.alt,
+.added_to_cart,
 .button {
+  color: black;
   background: #f5e3c6;
   display: inline-block;
   font-size: 15px;
@@ -305,6 +321,7 @@ header {
   transition: .2s ease-in-out; }
   .thumbs__thumb__detailsBtn:hover,
   .button.alt:hover,
+  .added_to_cart:hover,
   .button:hover {
     background: black;
     transition: .2s ease-in-out; }
@@ -331,30 +348,83 @@ header {
     #hamburger {
       display: none; } }
 
-.orderby {
-  overflow: hidden;
-  width: 90%;
-  margin: 2em auto;
-  text-align: center;
-  width: 100%;
-  padding-right: 1em;
-  cursor: pointer;
-  text-indent: 0.01px;
-  text-overflow: ellipsis;
-  border: none;
-  outline: none;
-  background: transparent;
-  background-image: none;
-  box-shadow: none;
-  -webkit-appearance: none;
-  appearance: none;
-  position: relative;
-  border-radius: 2px;
-  border: 2px solid #da3c41;
-  border-radius: 50px;
-  background: #ffffff;
-  padding: 8px 38px 8px 8px;
-  color: #da3c41; }
+.storefront-sorting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: pink; }
+  @media (min-width: 1024px) {
+    .storefront-sorting {
+      align-items: center;
+      justify-content: flex-end; } }
+  .storefront-sorting .woocommerce-notices-wrapper {
+    display: none; }
+  .storefront-sorting .woocommerce-result-count {
+    display: none; }
+    @media (min-width: 1024px) {
+      .storefront-sorting .woocommerce-result-count {
+        display: block; } }
+  .storefront-sorting .woocommerce-result-count {
+    background: red; }
+    @media (min-width: 1024px) {
+      .storefront-sorting .woocommerce-result-count {
+        flex-grow: 1; } }
+  .storefront-sorting .page-numbers {
+    background: red; }
+    @media (min-width: 1024px) {
+      .storefront-sorting .page-numbers {
+        flex-grow: 1; } }
 
-.orderby ::-ms-expand {
-  display: none; }
+.woocommerce-ordering {
+  position: relative; }
+  .woocommerce-ordering:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translate(-100%, -50%);
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid black;
+    z-index: 999;
+    pointer-events: none; }
+  .woocommerce-ordering .orderby {
+    cursor: pointer;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 50px;
+    background: #ffffff;
+    padding: 8px 38px 8px 8px;
+    color: black; }
+
+.single-product main {
+  padding-top: 100px; }
+
+.single-product .product_title {
+  font-size: 30px;
+  padding-bottom: 1em; }
+
+.single-product .woocommerce-product-details__short-description {
+  font-size: 20px;
+  line-height: 1.5em; }
+
+.site-footer {
+  width: 100%; }
+  @media (min-width: 1024px) {
+    .site-footer {
+      width: 1088px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      background: pink;
+      padding: 0;
+      padding: 5em 0 3em 0; } }
+
+.metaslider {
+  padding-bottom: 1em; }

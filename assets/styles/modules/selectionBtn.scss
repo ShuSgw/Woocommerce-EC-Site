@@ -1,0 +1,73 @@
+.storefront-sorting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: pink;
+
+    @include pc {
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .woocommerce-notices-wrapper {
+        display: none;
+    }
+
+    .woocommerce-result-count {
+        display: none;
+
+        @include pc {
+            display: block;
+        }
+    }
+
+    .woocommerce-result-count {
+        background: red;
+
+        @include pc {
+            flex-grow: 1;
+        }
+    }
+
+    .page-numbers {
+        background: red;
+
+        @include pc {
+            flex-grow: 1;
+        }
+    }
+}
+
+.woocommerce-ordering {
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translate(-100%, -50%);
+        right: 0;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid black;
+        z-index: 999;
+        pointer-events: none;
+    }
+
+
+    .orderby {
+        cursor: pointer;
+        outline: none;
+        -webkit-appearance: none;
+        appearance: none;
+        position: relative;
+        border: 2px solid black;
+        border-radius: 50px;
+        background: #ffffff;
+        padding: 8px 38px 8px 8px;
+        color: black;
+    }
+
+}

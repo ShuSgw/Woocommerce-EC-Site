@@ -1,0 +1,15 @@
+.single-product {
+    main {
+        padding-top: 100px;
+    }
+
+    .product_title {
+        font-size: $product-title;
+        padding-bottom: 1em;
+    }
+
+    .woocommerce-product-details__short-description {
+        font-size: $description-size;
+        line-height: $line-heigh;
+    }
+}

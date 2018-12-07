@@ -1,5 +1,6 @@
 jQuery(document).ready(function() {
   hambargerMenu();
+  // top hover animation
   const time = 0.1;
   jQuery(".thumbs__thumb").hover(
     function() {
@@ -102,5 +103,26 @@ jQuery(document).ready(function() {
       }, 300);
     });
   }
+  // if (jQuery(".related").length) {
+  //   jQuery(this)
+  //     .find("li")
+  //     .hover(
+  //       function() {
+  //         TweenMax.to(jQuery(this).find("img"), time, {
+  //           webkitFilter: "blur(10px)"
+  //         }),
+  //           TweenMax.to(jQuery(this).find(".thumbs__thumb__box"), time, {
+  //             display: "block"
+  //           });
+  //       },
+  //       function() {
+  //         TweenMax.to(jQuery(this).find(".thumbs__thumb__box"), time, {
+  //           display: "none"
+  //         }),
+  //           TweenMax.to(jQuery(this).find("img"), time, {
+  //             webkitFilter: "blur(0px)"
+  //           });
+  //       }
+  //     );
+  // }
 });
-// attachment - woocommerce_thumbnail size - woocommerce_thumbnail wp - post - image

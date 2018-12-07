@@ -1,10 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 $titlesize: 30px;
+$product-title: 30px;
 $page-width: 1088px;
 $nav-font-size: 20px;
+$description-size: 20px;
+$line-heigh:1.5em;
 $nav-font-size-mob: 30px;
 $nav-height: 35px;
 $darktext: grey;
 $theme-color: #f5e3c6;
+$base-font: 'Roboto',
+sans-serif;
+$mobile-width:90%;
+
 
 // @include tab {
 //     padding-top: 15%;
