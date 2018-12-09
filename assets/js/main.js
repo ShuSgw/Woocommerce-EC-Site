@@ -1,25 +1,60 @@
 jQuery(document).ready(function() {
   hambargerMenu();
   // top hover animation
+  var w = jQuery(window).width();
+  var x = 900;
   const time = 0.1;
-  jQuery(".thumbs__thumb").hover(
-    function() {
-      TweenMax.to(jQuery(this).find("img"), time, {
-        webkitFilter: "blur(10px)"
-      }),
-        TweenMax.to(jQuery(this).find(".thumbs__thumb__box"), time, {
-          display: "block"
-        });
-    },
-    function() {
-      TweenMax.to(jQuery(this).find(".thumbs__thumb__box"), time, {
-        display: "none"
-      }),
+  if (w > x) {
+    jQuery(".thumbs__thumb").hover(
+      function() {
         TweenMax.to(jQuery(this).find("img"), time, {
-          webkitFilter: "blur(0px)"
-        });
-    }
-  );
+          webkitFilter: "blur(10px)"
+        }),
+          TweenMax.to(jQuery(this).find(".thumbs__thumb__box"), time, {
+            display: "block"
+          });
+      },
+      function() {
+        TweenMax.to(jQuery(this).find(".thumbs__thumb__box"), time, {
+          display: "none"
+        }),
+          TweenMax.to(jQuery(this).find("img"), time, {
+            webkitFilter: "blur(0px)"
+          });
+      }
+    );
+  } else {
+    jQuery(window).scroll(function() {
+      jQuery(".thumbs__thumb").each(function() {
+        var imgPos = jQuery(this).offset().top;
+        var scroll = jQuery(window).scrollTop();
+        var windowHeight = jQuery(window).height();
+
+        var doch = jQuery(document).innerHeight(); //ページ全体の高さ
+        var winh = jQuery(window).innerHeight(); //ウィンドウの高さ
+        var bottom = doch - winh; //ページ全体の高さ - ウィンドウの高さ = ページの最下部位置
+
+        if (
+          scroll > imgPos - windowHeight + windowHeight / 1.5 ||
+          bottom <= jQuery(window).scrollTop()
+        ) {
+          TweenMax.to(jQuery(this).find("img"), time, {
+            webkitFilter: "blur(10px)"
+          }),
+            TweenMax.to(jQuery(this).find(".thumbs__thumb__box"), time, {
+              display: "block"
+            });
+        } else {
+          TweenMax.to(jQuery(this).find(".thumbs__thumb__box"), time, {
+            display: "none"
+          }),
+            TweenMax.to(jQuery(this).find("img"), time, {
+              webkitFilter: "blur(0px)"
+            });
+        }
+      });
+    });
+  }
 
   // hambarger menu
   function hambargerMenu() {

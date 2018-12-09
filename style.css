@@ -195,16 +195,16 @@ header {
   top: 50%;
   right: 50%;
   transform: translate(50%, -50%);
-  width: 100%; }
+  width: 100%;
+  display: none;
+  z-index: 999; }
   @media (min-width: 1024px) {
     .thumbs__thumb__box {
       position: absolute;
       top: 50%;
       right: 50%;
       transform: translate(50%, -50%);
-      width: 85%;
-      display: none;
-      z-index: 999; } }
+      width: 85%; } }
 
 .thumbs__thumb__title {
   font-size: 30px;
