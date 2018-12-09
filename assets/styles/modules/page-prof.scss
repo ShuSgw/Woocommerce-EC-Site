@@ -1,0 +1,32 @@
+.prof {
+    padding-top: 5%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include pc {
+        width: 85%;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+}
+
+.prof__description {
+    // width: 45%;
+    // display: flex;
+    // flex-direction: column;
+
+    @include pc {
+        width: 35%;
+    }
+}
+
+.prof__description__title {
+    margin: .6em 0;
+
+    @include pc {
+        margin: 0 0 .3em 0;
+    }
+}

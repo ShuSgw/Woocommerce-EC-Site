@@ -24,6 +24,7 @@ add_image_size('normal', 536, 307, true);
 add_image_size('long', 260, 627, true);
 add_image_size('small', 260, 307, true);
 add_image_size('big', 536, 627, true);
+add_image_size('pageThum', 536, 357, true);
 add_filter('woocommerce_get_image_size_single', 'crop_wc_image_single');
 
 // to stop chnageing layout based on size of images in single product page

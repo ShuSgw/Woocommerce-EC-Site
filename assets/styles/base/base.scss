@@ -3,6 +3,11 @@ body {
     color: $darktext;
 }
 
+p {
+    font-size: $description-size;
+    line-height: $line-heigh;
+}
+
 ul {
     margin: 0;
     padding: 0;
@@ -19,6 +24,7 @@ li {
 .site {
     width: $mobile-width;
     margin: 0 auto;
+    min-height: calc(100vh - 250px);
 
     @include pc {
         width: $page-width;

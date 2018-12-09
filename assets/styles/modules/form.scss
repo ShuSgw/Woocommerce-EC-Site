@@ -1,0 +1,28 @@
+.wpcf7 {
+
+    form {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    p {
+        width: 100%;
+
+        input {
+            margin: .3em 0;
+            width: 100%;
+            min-width: 200px;
+            border-radius: 50px;
+        }
+
+        textarea {
+            margin: .3em 0;
+            border-radius: 20px;
+        }
+
+        &:last-of-type {
+            width: 30%;
+        }
+    }
+
+}

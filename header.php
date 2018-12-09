@@ -31,6 +31,8 @@
                         <a href=<?php echo wc_get_cart_url(); ?>><i class="fas fa-cart-plus nav__cartBtn"></i></a>
                 </div>
         </header>
-        <?php if (!is_home()):?>
-                <div id="page" class="hfeed site">
+        <?php if (is_front_page()): ?>
+	        <?php echo do_shortcode('[metaslider id="160"]'); ?>
+	<?php else: ?>
+            <div id="page" class="hfeed site">
         <?php endif; ?>

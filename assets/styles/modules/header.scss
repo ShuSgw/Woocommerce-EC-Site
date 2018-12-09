@@ -16,7 +16,7 @@ header {
 .header__title {
     padding: 2em 0;
     flex-grow: 10;
-    font-size: calc($titlesize - 10px);
+    font-size: 20px;
 
     @include pc {
         padding: 0;

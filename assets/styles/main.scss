@@ -12,7 +12,7 @@
  Text Domain:  storefront-child
 */
 @import './base/remove';
-@import './base/reset';
+// @import './base/reset';
 @import './base/congig.scss';
 @import './base/base';
 @import './modules/header';
@@ -20,5 +20,7 @@
 @import './modules/button.scss';
 @import './modules/selectionBtn.scss';
 @import './modules/single-product.scss';
+@import './modules/page-prof.scss';
+@import './modules/form.scss';
 @import './modules/footer.scss';
 @import './modules/slideplug.scss';

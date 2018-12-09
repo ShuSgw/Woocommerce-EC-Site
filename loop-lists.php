@@ -7,6 +7,16 @@
     if ($loop->have_posts()) :
         while ($loop->have_posts()) : $loop->the_post();
         ++$counter; ?>
+        <?php if (wp_is_mobile()) : ?>
+        <div class="thumbs__thumb">
+            <div class="thumbs__thumb__box">
+                <h2><?php the_title('<h2 class="thumbs__thumb__title">', '</h2>'); ?></h2>
+                <p class="thumbs__thumb__content"><?php  echo mb_substr(get_the_excerpt(), 0, 30); ?>...</p>
+                <a class="thumbs__thumb__detailsBtn" href=<?php the_permalink(); ?>>See details</a>
+            </div>
+            <?php the_post_thumbnail('normal'); ?>
+        </div>
+        <?php else: ?>
         <div class="thumbs__thumb">
             <div class="thumbs__thumb__box">
                 <h2><?php the_title('<h2 class="thumbs__thumb__title">', '</h2>'); ?></h2>
@@ -37,6 +47,7 @@
                 <?php endif; ?>
             </div>
         </div>
+        <?php endif; ?>
     <?php
         endwhile;
     else:

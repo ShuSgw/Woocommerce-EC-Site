@@ -1,5 +1,5 @@
 							</div>
-						<footer id="colophon" class="site-footer" role="contentinfo">
+						<footer id="footer colophon" class="site-footer" role="contentinfo">
 							<p>Copyright © 2018 <?php bloginfo(); ?></p>
 						</footer>
 					</div>

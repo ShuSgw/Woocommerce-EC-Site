@@ -1,6 +1,9 @@
 .site-footer {
-    width: 100%;
+    width: $mobile-width;
+    position: relative;
     background: white;
+    margin: 0 auto;
+    padding: 5em 0 1em 0;
 
     @include pc {
         width: $page-width;
@@ -9,6 +12,6 @@
         align-items: center;
         justify-content: flex-start;
         padding: 0;
-        padding: 5em 0 3em 0;
+        padding: 5em 0 2em 0;
     }
 }
